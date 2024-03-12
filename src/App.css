@@ -3,15 +3,25 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  /* height: 40vmin;
+  pointer-events: none; */
+
+  margin-right: 60%;
+  
+  height: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.App-logo-container {
+  display: inline-block; 
+  vertical-align: middle;
+  margin-right: 20px;
+}
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -26,9 +36,13 @@
 
 .App-Title{
   background-color: #333;
+  width:80%;
   color: white;
+  
   padding: 20px;
-  text-align: center;
+  text-align: right;
+  display: flex; 
+  align-items: center;
 }
 
 .App-link {
