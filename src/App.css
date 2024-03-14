@@ -64,17 +64,20 @@
 
 
 .gallery-container {
-  display: flex;
-  justify-content: center;
+  display: flexbox;
+  justify-content: left;
   overflow-y: auto; /* Hace que la galería sea desplazable verticalmente si hay muchos elementos */
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)); /* Grid flexible con columnas de tamaño mínimo 200px */
-  grid-template-rows: repeat(auto-fit, minmax(100px, 2fr)); 
-  gap: 20px; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid flexible con columnas de tamaño mínimo 200px */
+  gap: 20px; /* Espacio entre elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: start; /* Alinea los elementos en la parte superior del contenedor */
+  overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
 }
+
 
 .gallery-item {
   background-color: #f9f9f9;
@@ -83,16 +86,24 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-item img {
+.item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que cada elemento ocupe toda la altura del contenedor */
+}
+
+.item-content img {
   width: 100%;
   height: auto;
 }
 
-.gallery-item h3 {
+.item-content h3 {
   margin-top: 10px;
 }
 
-.gallery-item p {
+.item-content p {
   margin-top: 5px;
   font-size: 14px;
 }
