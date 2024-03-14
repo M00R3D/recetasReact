@@ -58,3 +58,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto; /* Hace que la galería sea desplazable verticalmente si hay muchos elementos */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)); /* Grid flexible con columnas de tamaño mínimo 200px */
+  grid-template-rows: repeat(auto-fit, minmax(100px, 2fr)); 
+  gap: 20px; 
+}
+
+.gallery-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item h3 {
+  margin-top: 10px;
+}
+
+.gallery-item p {
+  margin-top: 5px;
+  font-size: 14px;
+}
